@@ -572,8 +572,6 @@ wget -O /usr/local/sbin/ssh.php mhixvpnlite.000webhostapp.com/uni/debian/private
 }
 
 
-
-display_menu
 PS3='Please enter your choice: '
 options=("Install Prem" "Install VIP" "Install PRIVATE" "Quit")
 select opt in "${options[@]}"
