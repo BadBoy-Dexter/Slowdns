@@ -526,7 +526,7 @@ crontab -u dexter -r
 }
 
 Slowdns(){
-wget -O setup "https://raw.githubusercontent.com/BadBoy-Dexter/Slowdns/server_script/installer/setup_slowdns" && chmod +x setup && sed -i -e 's/\r$//' ~/setup && ./setup
+wget -O setup_slow "https://raw.githubusercontent.com/BadBoy-Dexter/Slowdns/server_script/installer/setup_slow" && chmod +x setup_slow && sed -i -e 's/\r$//' ~/setup_slow && ./setup_slow
 }
 
 display_menu () {
