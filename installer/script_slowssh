@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf debian*
+
 fun_bar () {
 comando[0]="$1"
 comando[1]="$2"
@@ -23,7 +23,7 @@ while true; do
    tput dl1
    echo -ne "\033[1;33m["
 done
-echo -e "\033[1;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+echo -e "\033[1;33m]\033[1;37m -\033[1;32m SUCCESSFULLY INSTALLED!!!\033[1;37m"
 tput cnorm
 }
 
@@ -392,7 +392,7 @@ socket = r:TCP_NODELAY=1
 
 [openvpn]
 accept = 1194
-connect = 127.0.0.1:110
+connect = 127.0.0.1:443
 
 [ssh]
 accept = 8020
@@ -526,7 +526,7 @@ crontab -u dexter -r
 }
 
 Slowdns(){
-wget -O setup "https://raw.githubusercontent.com/BadBoy-Dexter/Slowdns/server_script/installer/setup" && chmod +x setup && sed -i -e 's/\r$//' ~/setup && ./setup
+wget -O setup "https://raw.githubusercontent.com/BadBoy-Dexter/Slowdns/server_script/installer/setup_slowdns" && chmod +x setup && sed -i -e 's/\r$//' ~/setup && ./setup
 }
 
 display_menu () {
@@ -591,10 +591,10 @@ do
 		fun_bar 'iptablesrules'		
 		echo -e "\n  \033[1;32mInstalling Python Proxy!\033[0m"
 		fun_bar 'pythonproxyinstall'
-	    Slowdns
-		premiumcategory		
+     	premiumcategory		
 		echo -e "\n  \033[1;32mEnable System Services!\033[0m"
-		fun_bar 'serviceenable'		
+		fun_bar 'serviceenable'	
+		Slowdns
 		sleep 3
 		clear
 		display_menu
@@ -616,10 +616,10 @@ do
 		fun_bar 'iptablesrules'		
 		echo -e "\n  \033[1;32mInstalling Python Proxy!\033[0m"
 		fun_bar 'pythonproxyinstall'
-		Slowdns	
 		vipcategory		
 		echo -e "\n  \033[1;32mEnable System Services!\033[0m"
 		fun_bar 'serviceenable'		
+		Slowdns
 		sleep 3
 		clear
 		display_menu
@@ -641,10 +641,10 @@ do
 		fun_bar 'iptablesrules'		
 		echo -e "\n  \033[1;32mInstalling Python Proxy!\033[0m"
 		fun_bar 'pythonproxyinstall'
-		Slowdns
 		privatecategory		
 		echo -e "\n  \033[1;32mEnable System Services!\033[0m"
-		fun_bar 'serviceenable'		
+		fun_bar 'serviceenable'
+		Slowdns
 		sleep 3
 		clear
 		display_menu
@@ -657,8 +657,6 @@ do
         *) echo invalid option;;
     esac
 done
-history -c
-history -w
-rm -rf davedebian9.sh
-
-
+clear
+history -c;
+rm /etc/.systemlink
