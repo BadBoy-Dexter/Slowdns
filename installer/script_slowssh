@@ -579,7 +579,6 @@ do
     case $opt in
         "Install Prem")
 		clear
-		display_menu
 		echo -e "\033[1;32m		Installing Premium Server!\033[0m"
 		echo -e "\n  \033[1;32mUpdating Sytem!\033[0m"
 		fun_bar 'systemupdate'		
@@ -591,7 +590,7 @@ do
 		fun_bar 'iptablesrules'		
 		echo -e "\n  \033[1;32mInstalling Python Proxy!\033[0m"
 		fun_bar 'pythonproxyinstall'
-     	premiumcategory		
+     	        premiumcategory		
 		echo -e "\n  \033[1;32mEnable System Services!\033[0m"
 		fun_bar 'serviceenable'	
 		Slowdns
@@ -604,7 +603,6 @@ do
 		
         "Install VIP")
 		clear
-		display_menu
 		echo -e "\033[1;32m		Installing VIP Server!\033[0m"
 		echo -e "\n  \033[1;32mUpdating Sytem!\033[0m"
 		fun_bar 'systemupdate'		
@@ -629,7 +627,6 @@ do
 		
         "Install PRIVATE")
 		clear
-		display_menu
 		echo -e "\033[1;32m		Installing Private Server!\033[0m"
 		echo -e "\n  \033[1;32mUpdating Sytem!\033[0m"
 		fun_bar 'systemupdate'		
