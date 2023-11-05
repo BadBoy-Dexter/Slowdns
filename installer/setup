@@ -79,9 +79,9 @@ chmod +x /etc/slowdns/server.pub
 chmod +x /etc/slowdns/sldns-server
 chmod +x /etc/slowdns/sldns-client
 
-wget -O /usr/bin/badvpn-udpgw "https://github.com/Dexter-Hysteria/status/raw/mtk_vpn/badvpn-udpgw64"
-chmod +x /usr/bin/badvpn-udpgw
-ps x | grep 'udpvpn' | grep -v 'grep' || screen -dmS udpvpn /usr/bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 10000 --max-connections-for-client 10 --client-socket-sndbuf 10000
+#wget -O /usr/bin/badvpn-udpgw "https://github.com/Dexter-Hysteria/status/raw/mtk_vpn/badvpn-udpgw64"
+#chmod +x /usr/bin/badvpn-udpgw
+#ps x | grep 'udpvpn' | grep -v 'grep' || screen -dmS udpvpn /usr/bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 10000 --max-connections-for-client 10 --client-socket-sndbuf 10000
 
 cd
 cat > /etc/systemd/system/client-sldns.service << END
