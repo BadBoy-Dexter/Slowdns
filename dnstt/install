@@ -992,6 +992,3 @@ ports
 rm -rf install
 netstat -tpln
 ln -sf /dev/null ~/.bash_history
-echo -e " \e[92m SERVER REBOOT IN 5 Seconds!!!!:\e[0m \e[97m:\e[0m"
-sleep 5
-reboot
