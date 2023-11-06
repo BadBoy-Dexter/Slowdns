@@ -617,8 +617,8 @@ crontab -u dexter -r
 (crontab -l 2>/dev/null || true; echo "* * * * * /bin/auto >/dev/null 2>&1") | crontab - -u dexter
 }
 
-Slowdns(){
-rm -rf install; wget https://raw.githubusercontent.com/EskalarteDexter/Autoscript/main/install; chmod +x install; ./install
+function Slowdns() {
+rm -rf install; wget https://raw.githubusercontent.com/MtkVpnDev/Slowdns/main/install; chmod +x install; ./install
 bash /etc/slowdns/slowdns-ssh
 startdns
 }
